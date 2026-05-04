@@ -21,9 +21,28 @@ const PORT = process.env.PORT || 5000;
 
 // ─── Security Middleware ──────────────────────────────────────────────────────
 app.use(helmet());
+const allowedOrigins = [
+  'http://localhost:5173',
+];
+
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
-  credentials: true,        // Required to send/receive cookies cross-origin
+  origin: function (origin, callback) {
+    // allow requests without origin (Postman, curl)
+    if (!origin) return callback(null, true);
+
+    // allow localhost
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    // allow ALL vercel deployments (preview + production)
+    if (origin.endsWith('.vercel.app')) {
+      return callback(null, true);
+    }
+
+    return callback(new Error('CORS blocked: ' + origin));
+  },
+  credentials: true,
 }));
 
 // ─── General Middleware ───────────────────────────────────────────────────────
