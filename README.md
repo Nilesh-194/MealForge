@@ -3,16 +3,6 @@
 > **Find recipes based on ingredients you already own. AI-powered, completely free.**
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-meal--forge--beta.vercel.app-C4622D?style=for-the-badge&logo=vercel)](https://meal-forge-beta.vercel.app)
-[![GitHub](https://img.shields.io/badge/GitHub-Nilesh--194%2FMealForge-1C1C1A?style=for-the-badge&logo=github)](https://github.com/Nilesh-194/MealForge)
-[![License](https://img.shields.io/badge/License-MIT-7A9E7E?style=for-the-badge)](LICENSE)
-
----
-
-## 📸 Screenshots
-
-| Landing | Home | AI Chef |
-|---------|------|---------|
-| ![Landing](https://via.placeholder.com/300x180/FAF7F2/C4622D?text=Landing) | ![Home](https://via.placeholder.com/300x180/1C1C1A/D4A843?text=Home) | ![AI](https://via.placeholder.com/300x180/FAF7F2/7A5FB0?text=AI+Chef) |
 
 ---
 
